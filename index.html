@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="main-container" class="main-container">
+      <div id="zip-lookup">
+        <input type="text" placeholder="Enter Zip Code" id="zip-input-field" />
+        <button type="button" id="submit-button">Submit</button>
+      </div>
+      <div id="weather-icon">
+        <div id="weather-icon-container">
+          <img
+            id="weather-icon-image"
+            src="sample.png"
+            alt="weather icon image"
+          />
+          <div id="temp-text-cointainer">
+            <h2 id="temperature">Weather</h2>
+            <p id="high-low" class="weatherDataText">High Low</p>
+            <p id="chance-of-rain" class="weatherDataText">Chance of Rain</p>
+          </div>
+          <h2 id="city-name">Jersey City</h2>
+        </div>
+      </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
