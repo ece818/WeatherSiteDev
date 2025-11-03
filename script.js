@@ -50,9 +50,11 @@ function getZipcodeInput() {
 
 }
 async function getWeather(zipcode) {
-    const api_key = API_KEY
-    console.log(api_key)
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${zipcode}`)
+    const response = await fetch(`https://weather-proxy-802072743511.northamerica-northeast2.run.app/weatherForecast?zip=${zipcode}`, {
+        "headers": {
+            "Access-Control-Allow-Origin": "true"
+        }
+    })
     const jsonResponse = await response.json()
     console.log(jsonResponse)
     return jsonResponse
