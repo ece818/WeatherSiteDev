@@ -52,7 +52,7 @@ function getZipcodeInput() {
 async function getWeather(zipcode) {
     const api_key = API_KEY
     console.log(api_key)
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${zipcode}`)
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${zipcode}`)
     const jsonResponse = await response.json()
     console.log(jsonResponse)
     return jsonResponse
